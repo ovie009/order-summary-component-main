@@ -1,0 +1,190 @@
+.attribution {
+    font-size: 11px; text-align: center; 
+    grid-area: attribution;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+body{
+    background-color: rgb(224, 232, 255);
+    background-image: url("images/pattern-background-mobile.svg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: grid;
+    margin: 0;
+    padding: 40px 0;
+    width: 100vw;
+    height: 100vh;
+    grid-template-rows: 10% 80% 5% 5%;
+    grid-template-columns: 5% 90% 5%;
+    grid-template-areas:
+        '. . .' 
+        '. card .'
+        '. . .'
+        '. attribution .'
+    ;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    /* background-color: red; */
+}
+
+/* styling for surface duo */
+@media only screen and (min-width: 540px) {
+    body {
+        grid-template-columns: 10% 80% 10%;
+    }
+}
+
+/* styling for ipad */
+@media only screen and (min-width: 768px) {
+    body {
+        grid-template-columns: 15% 70% 15%;
+    }
+}
+
+/* styling for ipad pro */
+@media only screen and (min-width: 1024px) {
+    body {
+        grid-template-columns: 25% 50% 25%;
+        /* background-image: url("images/pattern-background-desktop.svg"); */
+    }
+}
+
+/* styling for Nest Hub Max */
+@media only screen and (min-width: 1280px) {
+    body {
+        grid-template-columns: 40% 30% 40%;
+        background-image: url("images/pattern-background-desktop.svg");
+    }
+}
+
+
+.card{
+    grid-area: card;
+    background-color: white;
+    height: fit-content;
+    border-radius: 20px;
+    /* padding: 0; */
+}
+
+.card img{
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+.card-body{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    padding: 25px;
+}
+
+.card-header{
+    font-size: 1.5em;
+    font-weight: bolder;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    color: darkslategray;
+}
+
+.card-text{
+    color: gray;
+    text-align: center;
+    padding: 0 20px;
+    line-height: 25px;
+}
+
+.card-section{
+    background-color: whitesmoke;
+    padding: 15px;
+    display: flex;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* styling for ipad pro */
+@media only screen and (max-width: 320px) {
+    .card-section{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .section-container{
+        margin-bottom: 20px;
+    }
+}
+
+.card-section img{
+    height: 60px;
+    width: 60px;
+    margin-right: 10px;
+}
+
+.section-container{
+    display: flex;
+    align-items: center;
+}
+
+.section-container div{
+    padding: 0;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+}
+
+.section-container div span{
+    padding: 0;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+.section-container div p{
+    padding: 0;
+    margin: 5px 0;
+    color: rgb(82, 82, 82);
+    color: gray;
+}
+
+.card-link{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    color: blueviolet;
+    color: rgb(56, 42, 225);
+}
+
+.card-btn{
+    margin: 5px 0 ;
+    padding: 15px;
+    border: none;
+    width: 100%;
+    border-radius: 10px;
+    /* font-weight: bold; */
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.card-primary-btn{
+    background-color: rgb(56, 42, 225);
+    color: white;
+    box-shadow: 0px 10px 20px 1px darkgray;
+}
+
+.card-secondary-btn{
+    background-color: transparent;
+    color: gray;
+    box-shadow: none;
+}
